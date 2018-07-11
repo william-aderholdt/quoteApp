@@ -23,7 +23,7 @@ class Quote extends Component {
                 let quoteData = data[0];
                 quote.content = quoteData.content.replace('<p>',"").replace('</p>','').replace(/&#8217;/g,"'");
                 quote.title = quoteData.title;
-                quote.link = "https://twitter.com/intent/tweet?text=" + '"' + quote.content + '" -' +quote.title;
+                quote.link = "https://twitter.com/intent/tweet?text=" + '"' + quote.content + '" -' + quote.title;
                 this.setState({ quote }, () => {
                     if(this.state.hasQuote === false) {
                         this.setState({ hasQuote: true })
@@ -71,11 +71,11 @@ class Quote extends Component {
             this.renderQuote() : ''}
           </div>
           <div id='imgs'>
-            <img src={hasQuote === true ? 
+            <img alt='' src={hasQuote === true ? 
             this.randImg() : ''} />
           </div>
-          <button className="btn" id="tweetButton"><a id='tweetQuote' href={link} target='_blank'>Tweet</a></button>
-          <button className="btn" onClick={this.getRandomQuote}>Get Quote</button>
+          <a id='tweetQuote' href={link} target='_blank'><button className="btn fa fa-twitter" id="tweetButton"></button></a>
+          <button className="btn" onClick={this.getRandomQuote}>New Quote</button>
         </div>
       )
     }
