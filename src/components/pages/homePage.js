@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 
+//component
+import Quotetext from './quotes/quoteText';
+
 class Homepage extends Component {
   render() {
     return (
-      <div className="container-fluid">
-
-      Homepage Content Here
-
-      </div>
+      <wrapper className="container-fluid">
+        <quoteBox>
+          <Quotetext />
+          <interacts>
+            1
+          </interacts>
+        </quoteBox>
+      </wrapper>
     );
   }
 }

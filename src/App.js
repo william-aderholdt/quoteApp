@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './Assets/css/default.min.css';
 
 //components
-
 import Homepage from './components/pages/homePage';
+import Quotes from './components/quotes/quotes';
 
 class App extends Component {
   render() {

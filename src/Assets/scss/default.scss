@@ -1,1 +1,25 @@
 @import "_config.scss";
+
+wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    quoteBox {
+        grid-column: 2;
+        display: block;
+        margin-top: 35vh;
+        height: auto;
+        width: 80vw;
+        text-align: center;
+        align-self: center;
+        padding: 20px 20px;
+        border: 1px solid black;
+        max-width: 500px;
+        display: grid;
+        grid-template-rows: auto 50px;
+
+        interacts {
+            
+        }
+    }
+}

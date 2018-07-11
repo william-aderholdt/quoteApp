@@ -1,1 +1,1 @@
-body{font-size:10px}a{color:#000}
+body{font-family:sans-serif;font-size:18px;color:#010000;font-weight:400;font-style:normal}wrapper{display:grid;grid-template-columns:repeat(3,1fr)}wrapper quoteBox{grid-column:2;display:block;margin-top:35vh;height:auto;width:80vw;text-align:center;align-self:center;padding:20px 20px;border:1px solid #000;max-width:500px;display:grid;grid-template-rows:auto 50px}
