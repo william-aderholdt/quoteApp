@@ -11,18 +11,18 @@ class Quote extends Component {
             },
             hasQuote: false
         }
-    this.END_POINT = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+    this.END_POINT = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=4";
     }
 
     getRandomQuote = () => {
-        fetch(this.END_POINT)
+        fetch(this.END_POINT, {cache: "no-store"})
         .then(response => response.json())
         .then(data => {
             if (data[0].content && data[0].title && data[0].link) {
                 let { quote } = this.state;
                 let quoteData = data[0];
                 quote.content = quoteData.content.replace('<p>',"").replace('</p>','').replace(/&#8217;/g,"'");
-                quote.title = quoteData.title;
+                quote.title = quoteData.title.replace(/&#8217;/g,"'").replace(/&#038;/g, "&");
                 quote.link = "https://twitter.com/intent/tweet?text=" + '"' + quote.content + '" -' + quote.title;
                 this.setState({ quote }, () => {
                     if(this.state.hasQuote === false) {
