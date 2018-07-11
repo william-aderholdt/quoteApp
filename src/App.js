@@ -3,12 +3,12 @@ import './Assets/css/default.min.css';
 
 //components
 import Homepage from './components/pages/homePage';
-import Quotes from './components/quotes/quotes';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" id="background">
 
         <Homepage />
 

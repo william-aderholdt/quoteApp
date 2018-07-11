@@ -1,21 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-//component
-import Quotetext from './quotes/quoteText';
+import Quote from './quote';
 
 class Homepage extends Component {
   render() {
     return (
-      <wrapper className="container-fluid">
-        <quoteBox>
-          <Quotetext />
-          <interacts>
-            1
-          </interacts>
-        </quoteBox>
-      </wrapper>
+      <div id='wrapper' className="container-fluid">
+        <Quote />
+      </div>
     );
   }
 }
 
 export default Homepage;
+
